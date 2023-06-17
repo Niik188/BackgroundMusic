@@ -1,3 +1,4 @@
+const text = document.getElementById("text")
 navigator.geolocation.getCurrentPosition(success, error, {
     // высокая точность
     enableHighAccuracy: true
@@ -10,6 +11,7 @@ navigator.geolocation.getCurrentPosition(success, error, {
      // [широта, долгота]
      setInterval(() => {
     console.log(position)
+    text.innerText = position
     }, 1000);
   }
   
